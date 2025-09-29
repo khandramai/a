@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository and fetch full history
         uses: actions/checkout@v4
         with:
-          # PAT требуется для использования Action из другого репозитория
+          # Токен нужен для получения Action из репозитория C
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           fetch-depth: 0
 

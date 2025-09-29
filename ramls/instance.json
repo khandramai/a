@@ -20,10 +20,6 @@
       "type": "string",
       "description": "A remote URI uniquely identifying the source of the instance"
     },
-    "title": {
-      "type": "string",
-      "description": "The primary title (or label) associated with the resource"
-    },
     "alternativeTitles": {
       "type": "array",
       "description": "List of alternative titles for the resource (e.g. original language version title of a movie)",
