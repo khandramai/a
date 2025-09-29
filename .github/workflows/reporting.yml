@@ -1,0 +1,21 @@
+name: RAMLs Report (PR)
+
+on:
+  pull_request:
+    branches: [ main, dev ]     # при необходимости поменяй список веток
+    paths:
+      - 'ramls/**'              # триггерим только при изменениях в каталоге ramls
+  # Опционально — ручной запуск
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  report:
+    uses: khandramai/c/.github/workflows/reporting_reusable.yml@main
+    with:
+      path: 'ramls'                     # каталог, по которому строим diff
+      report_filename: 'ramls-diff-report.md'
+    secrets: inherit                    # пробрасываем GITHUB_TOKEN (и другие секреты при необходимости)
