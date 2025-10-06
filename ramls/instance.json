@@ -18,11 +18,6 @@
       "items": {
         "type": "object",
         "properties": {
-          "alternativeTitleTypeId": {
-            "type": "string",
-            "description": "UUID for an alternative title qualifier",
-            "$ref": "uuid.json"
-          },
           "alternativeTitle": {
             "type": "string",
             "description": "An alternative title for the resource"
