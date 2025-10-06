@@ -8,21 +8,9 @@
       "description": "The unique ID of the instance record; a UUID",
       "$ref": "uuid.json"
     },
-    "_version": {
-      "type": "integer",
-      "description": "Record version for optimistic locking"
-    },
     "matchKey": {
       "type": "string",
       "description" : "A unique instance identifier matching a client-side bibliographic record identification scheme, in particular for a scenario where multiple separate catalogs with no shared record identifiers contribute to the same Instance in Inventory. A match key is typically generated from select, normalized pieces of metadata in bibliographic records"
-    },
-    "sourceUri": {
-      "type": "string",
-      "description": "A remote URI uniquely identifying the source of the instance"
-    },
-    "source": {
-      "type": "string",
-      "description": "The metadata source and its format of the underlying record to the instance record. (e.g. FOLIO if it's a record created in Inventory; MARC if it's a MARC record created in MARCcat or EPKB if it's a record coming from eHoldings; CONSORTIUM-MARC or CONSORTIUM-FOLIO for sharing Instances)."
     },
     "alternativeTitles": {
       "type": "array",
@@ -30,11 +18,6 @@
       "items": {
         "type": "object",
         "properties": {
-          "alternativeTitleTypeId": {
-            "type": "string",
-            "description": "UUID for an alternative title qualifier",
-            "$ref": "uuid.json"
-          },
           "alternativeTitle": {
             "type": "string",
             "description": "An alternative title for the resource"
@@ -177,11 +160,6 @@
           "value": {
             "type": "string",
             "description": "Subject heading value"
-          },
-          "authorityId": {
-            "type": "string",
-            "description": "UUID of authority record that controls a subject heading",
-            "$ref": "uuid.json"
           },
           "sourceId": {
             "type": "string",
@@ -347,9 +325,9 @@
         "$ref": "uuid.json"
       }
     },
-    "instanceFormats": {
+    "renamedInstanceFormats": {
       "type": "array",
-      "description": "List of dereferenced instance formats",
+      "description": "Renamed ist of dereferenced instance formats",
       "items": {
         "type": "object",
         "$ref": "instanceformat.json"
@@ -370,7 +348,7 @@
     },
     "languages": {
       "type": "array",
-      "description": "The set of languages used by the resource",
+      "description": "Changed description",
       "minItems": 0,
       "items": {
         "type": "string"
@@ -498,7 +476,6 @@
   "additionalProperties": false,
   "required": [
     "source",
-    "title",
     "instanceTypeId"
   ]
 }
