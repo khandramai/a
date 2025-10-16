@@ -57,7 +57,7 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
-          repository: ${{ github.event.inputs.module_name }}"
+          repository: ${{ github.event.inputs.module_name }}
           ref: main
 
       - name: Determine BASE/HEAD
