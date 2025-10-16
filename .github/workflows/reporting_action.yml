@@ -19,7 +19,7 @@ on:
       head:
         description: "Optional head ref (tag/commit)"
         required: false
-      module:
+      module_name:
         description: 'Module name (e.g. khandramai/a)'
         required: true
         default: 'khandramai/a'
@@ -57,7 +57,7 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
-          repository: ${{github.event.inputs.module}}"
+          repository: ${{ github.event.inputs.module_name }}"
           ref: main
 
       - name: Determine BASE/HEAD
